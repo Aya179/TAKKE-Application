@@ -1,0 +1,116 @@
+﻿@*@model Takke.Models.Order
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Order</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="OrderDate" class="control-label"></label>
+                <input asp-for="OrderDate" class="form-control" />
+                <span asp-validation-for="OrderDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApproximateCost" class="control-label"></label>
+                <input asp-for="ApproximateCost" class="form-control" />
+                <span asp-validation-for="ApproximateCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cost" class="control-label"></label>
+                <input asp-for="Cost" class="form-control" />
+                <span asp-validation-for="Cost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Paid" class="control-label"></label>
+                <input asp-for="Paid" class="form-control" />
+                <span asp-validation-for="Paid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SourceDetails" class="control-label"></label>
+                <input asp-for="SourceDetails" class="form-control" />
+                <span asp-validation-for="SourceDetails" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DestenationDetails" class="control-label"></label>
+                <input asp-for="DestenationDetails" class="form-control" />
+                <span asp-validation-for="DestenationDetails" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClientId" class="control-label"></label>
+                <select asp-for="ClientId" class ="form-control" asp-items="ViewBag.ClientId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DriverId" class="control-label"></label>
+                <select asp-for="DriverId" class ="form-control" asp-items="ViewBag.DriverId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="SourceLocation" class="control-label"></label>
+                <input asp-for="SourceLocation" class="form-control" />
+                <span asp-validation-for="SourceLocation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DestenationLocation" class="control-label"></label>
+                <input asp-for="DestenationLocation" class="form-control" />
+                <span asp-validation-for="DestenationLocation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrderType" class="control-label"></label>
+                <input asp-for="OrderType" class="form-control" />
+                <span asp-validation-for="OrderType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Driverarrivingtime" class="control-label"></label>
+                <input asp-for="Driverarrivingtime" class="form-control" />
+                <span asp-validation-for="Driverarrivingtime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Clientarrivingtime" class="control-label"></label>
+                <input asp-for="Clientarrivingtime" class="form-control" />
+                <span asp-validation-for="Clientarrivingtime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Orderstarttime" class="control-label"></label>
+                <input asp-for="Orderstarttime" class="form-control" />
+                <span asp-validation-for="Orderstarttime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Waitingtime" class="control-label"></label>
+                <input asp-for="Waitingtime" class="form-control" />
+                <span asp-validation-for="Waitingtime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Arrivingtime" class="control-label"></label>
+                <input asp-for="Arrivingtime" class="form-control" />
+                <span asp-validation-for="Arrivingtime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Estimatedarrivingtime" class="control-label"></label>
+                <input asp-for="Estimatedarrivingtime" class="form-control" />
+                <span asp-validation-for="Estimatedarrivingtime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}*@

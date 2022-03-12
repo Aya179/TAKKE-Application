@@ -1,0 +1,85 @@
+﻿@model Takke.Models.Driver
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="row">
+    <div class="col-12">
+
+        <div class="card card-primary border-0">
+            <div class="card-header">
+                <h3 class="card-title"> تعديل السيارة</h3>
+                <div class="d-inline">
+                    <a asp-action="Index"><i class="fa fa-arrow-left back-icon"></i></a>
+                </div>
+            </div>
+
+            <form asp-action="Edit">
+                <div class="card-body">
+                    <div class="row justify-content-center">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="DriverId" />
+
+                        <div class="col-5">
+                            <div class="form-group">
+                                <label asp-for="DriverName" class="control-label"></label>
+                                <input asp-for="DriverName" class="form-control" />
+                                <span asp-validation-for="DriverName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="DriverBirthday" class="control-label"></label>
+                                <input asp-for="DriverBirthday" class="form-control" />
+                                <span asp-validation-for="DriverBirthday" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="form-group">
+                                <label asp-for="Certificate" class="control-label"></label>
+                                <input asp-for="Certificate" class="form-control" />
+                                <span asp-validation-for="Certificate" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Mobile" class="control-label"></label>
+                                <input asp-for="Mobile" class="form-control" />
+                                <span asp-validation-for="Mobile" class="text-danger"></span>
+                            </div>
+
+                        </div>
+
+                        <div class="col-4">
+                            <div class="form-group d-flex justify-content-center">
+                                <label asp-for="DriverGender" class="control-label"></label>
+                                <div class="custom-control custom-radio">
+                                    <div class="radio-1">
+                                        <input asp-for="DriverGender" class="custom-control-input" id="male" value="ذكر" type="radio">
+                                        <label for="male" class="custom-control-label">ذكر</label>
+                                    </div>
+                                    <div class="radio-2">
+                                        <input asp-for="DriverGender" class="custom-control-input" id="female" value="أنثى" type="radio">
+                                        <label for="female" class="custom-control-label">أنثى</label>
+                                    </div>
+                                </div>
+                                <span asp-validation-for="DriverGender" class="text-danger"></span>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-outline-primary">
+                        <i class="far fa-edit"></i>
+                        تعديل
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

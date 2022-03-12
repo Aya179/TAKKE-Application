@@ -1,0 +1,130 @@
+﻿@model IEnumerable<Takke.Models.Client>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col-12">
+
+
+        <div class="card">
+
+            <div class="card-header">
+                <h3 class="card-title">
+                    الزبائن
+                    <i class="fas fa-users"></i>
+
+                </h3>
+                @*<a class="float-left" asp-action="Create">
+                        <i class="fa fa-plus"></i>
+                        إنشاء زبون جديدة
+
+                    </a>*@
+            </div>
+
+            <div class="card-body">
+                <div class="table-responsive pt-2">
+                    <table class="table table-striped" id="clients_table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ClientName)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ClientNumber)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ClientMobile)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ClientGender)
+                                </th>
+                          
+                             
+                                <th>
+                                    @Html.DisplayNameFor(model => model.IsActive)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.RegisterationDate)
+                                </th>
+                       
+                             
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Mainphoto)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ClientName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ClientNumber)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ClientMobile)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ClientGender)
+                                    </td>
+                                
+                                  
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.IsActive)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.RegisterationDate)
+                                    </td>
+                                  
+                                  
+                                 
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Mainphoto)
+                                    </td>
+                                    <td>
+                                        <a asp-action="Edit" asp-route-id="@item.ClientId">Edit</a> |
+                                        <a asp-action="Details" asp-route-id="@item.ClientId">Details</a> |
+                                        <a asp-action="Delete" asp-route-id="@item.ClientId">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+@section Scripts {
+    <script>
+$(function () {
+    $('#clients_table').DataTable({
+        "lengthMenu": [[5, 10, 15, 20, 25, -1], [5, 10, 15, 20, 25, "All"]],
+        "responsive": true,
+        "language": {
+            "sProcessing": "جارٍ التحميل...",
+            "sLengthMenu": "أظهر _MENU_ مدخلات",
+            "sZeroRecords": "لم يتم العثور على أية نتائج",
+            "sInfo": "إظهار _START_ إلى _END_ من أصل _TOTAL_ مدخل",
+            "sInfoEmpty": "يعرض 0 إلى 0 من أصل 0 سجل",
+            "sInfoFiltered": "(منتقاة من مجموع _MAX_ مُدخل)",
+            "sInfoPostFix": "",
+            "sSearch": "البحث:",
+            "sUrl": "",
+            "oPaginate": {
+                "sFirst": "الأول",
+                "sPrevious": "السابق",
+                "sNext": "التالي",
+                "sLast": "الأخير"
+            }
+        }
+    });
+  });</script>
+}  

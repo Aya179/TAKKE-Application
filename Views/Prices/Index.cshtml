@@ -1,0 +1,80 @@
+﻿@model IEnumerable<Takke.Models.Price>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col-12">
+
+
+        <div class="card">
+
+            <div class="card-header">
+                <h3 class="card-title">
+                    الاسعار
+                    <i class="fas fa-money-bill-alt"></i>
+                </h3>
+            </div>
+
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.KmPrice)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.HourPrice)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model._5000Cobon)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model._10000Cobon)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model._25000Cobon)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.LowestPrice)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.KmPrice)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.HourPrice)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item._5000Cobon)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item._10000Cobon)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item._25000Cobon)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.LowestPrice)
+                                </td>
+                                <td>
+                                    <a asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-edit"></i>
+                                    تعديل
+                                    </a> 
+
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                </div>

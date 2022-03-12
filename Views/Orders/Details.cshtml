@@ -1,0 +1,166 @@
+﻿@model Takke.Models.Order
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div class="row">
+
+    <div class="col-12">
+        <div class="mt-3 mb-3">
+            <span class="lead">
+                التفاصيل
+            </span>
+            <div class="d-inline float-right">
+                <a asp-action="Index"><i class="fa fa-arrow-left back-icon fa-2x"></i> </a>
+            </div>
+        </div>
+
+
+        <table class="table">
+            <tr>
+                <th class="w-25">
+                    @Html.DisplayNameFor(model => model.OrderDate)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.OrderDate)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ApproximateCost)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.ApproximateCost)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cost)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Cost)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Status)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Paid)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Paid)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.SourceDetails)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.SourceDetails)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.DestenationDetails)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.DestenationDetails)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.SourceLocation)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.SourceLocation)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.DestenationLocation)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.DestenationLocation)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderType)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.OrderType)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Driverarrivingtime)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Driverarrivingtime)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Clientarrivingtime)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Clientarrivingtime)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Orderstarttime)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Orderstarttime)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Waitingtime)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Waitingtime)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Arrivingtime)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Arrivingtime)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Estimatedarrivingtime)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Estimatedarrivingtime)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Client)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Client.ClientMobile)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Driver)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Driver.Certificate)
+                </td>
+            </tr>
+        </table>
+    </div>
+    </div>

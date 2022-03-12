@@ -1,0 +1,54 @@
+﻿@model Takke.Models.Price
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Price</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KmPrice)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KmPrice)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HourPrice)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HourPrice)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model._5000Cobon)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model._5000Cobon)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model._10000Cobon)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model._10000Cobon)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model._25000Cobon)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model._25000Cobon)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LowestPrice)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LowestPrice)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

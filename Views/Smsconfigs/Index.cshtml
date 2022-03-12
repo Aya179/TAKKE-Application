@@ -1,0 +1,90 @@
+﻿@model IEnumerable<Takke.Models.Smsconfig>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container-fluid">
+
+  
+
+
+    <div class="row">
+        <!--/.col (left) -->
+        <!-- right column -->
+        <div class="col-md-6 mx-auto">
+            <div class="text-center mt-2 mb-4">
+
+                @if (Model.Count() == 0)
+                {
+                    <a asp-action="Create" class="btn btn-outline-primary">
+                        <i class="fas fa-sms"></i>
+                        اضافة الاعدادات
+                    </a>
+                }
+                else
+                {
+                    <a asp-action="Edit" class="btn btn-outline-secondary" asp-route-id="@Model.FirstOrDefault().Id">
+                        <i class="fas fa-sms"></i>
+                        تعديل الاعدادات
+                    </a>
+                }
+            </div>
+
+            <!-- general form elements disabled -->
+            <div class="card card-warning">
+                <div class="card-header">
+                    <h3 class="card-title float-left">ارسال رسالة</h3>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <form method="post" enctype="multipart/form-data" asp-action="SendMeassge">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <!-- text input -->
+                                <div class="form-group">
+                                    <label>الرقم</label>
+                                    <input required type="text" name="phone" class="form-control" placeholder="963912345678">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <!-- textarea -->
+                                <div class="form-group">
+                                    <label for="msg">الرسالة</label>
+                                    <textarea name="msg" id="msg" class="form-control" required rows="3" placeholder="الرسالة ..." style="margin-top: 0px; margin-bottom: 0px; height: 96px;"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <!-- radio -->
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input id="Lang_Check1" required value="0" class="form-check-input" type="radio" name="lang" checked="">
+                                        <label for="Lang_Check1" class="form-check-label">عربي</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input id="Lang_Check2" required value="1" class="form-check-input" type="radio" name="lang">
+                                        <label for="Lang_Check2" class="form-check-label">انكليزي</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <button type="submit" @(Model.Count() == 0 ? "disabled" : "") class="btn btn-primary">ارسال</button>
+
+                    </form>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+            <!-- general form elements disabled -->
+            <!-- /.card -->
+        </div>
+        <!--/.col (right) -->
+    </div>
+    <!-- /.row -->
+</div>

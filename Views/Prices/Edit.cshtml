@@ -1,0 +1,59 @@
+﻿@model Takke.Models.Price
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Price</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="KmPrice" class="control-label"></label>
+                <input asp-for="KmPrice" class="form-control" />
+                <span asp-validation-for="KmPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HourPrice" class="control-label"></label>
+                <input asp-for="HourPrice" class="form-control" />
+                <span asp-validation-for="HourPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="_5000Cobon" class="control-label"></label>
+                <input asp-for="_5000Cobon" class="form-control" />
+                <span asp-validation-for="_5000Cobon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="_10000Cobon" class="control-label"></label>
+                <input asp-for="_10000Cobon" class="form-control" />
+                <span asp-validation-for="_10000Cobon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="_25000Cobon" class="control-label"></label>
+                <input asp-for="_25000Cobon" class="form-control" />
+                <span asp-validation-for="_25000Cobon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LowestPrice" class="control-label"></label>
+                <input asp-for="LowestPrice" class="form-control" />
+                <span asp-validation-for="LowestPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

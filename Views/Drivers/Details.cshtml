@@ -1,0 +1,82 @@
+﻿@model Takke.Models.Driver
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="row">
+
+    <div class="col-12">
+        <div class="mt-3 mb-3">
+            <span class="lead">
+                التفاصيل
+            </span>
+            <div class="d-inline float-right">
+                <a asp-action="Index"><i class="fa fa-arrow-left back-icon fa-2x"></i> </a>
+            </div>
+        </div>
+
+
+        <table class="table">
+            <tr>
+                <th class="w-25">
+                    @Html.DisplayNameFor(model => model.DriverName)
+                </th>
+                <td>
+
+                    @Html.DisplayFor(model => model.DriverName)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.DriverBirthday)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.DriverBirthday)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.DriverGender)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.DriverGender)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Certificate)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Certificate)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Mobile)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Mobile)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Registerationdate)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Registerationdate)
+                </td>
+            </tr>
+        </table>
+
+
+
+    </div>
+    <div class="mt-2 mr-4">
+        <button type="submit" class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@Model.DriverId">
+            <i class="far fa-edit"></i>
+            تعديل
+        </button>
+    </div>
+
+</div>

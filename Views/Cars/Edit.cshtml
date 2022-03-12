@@ -1,0 +1,89 @@
+﻿@model Takke.Models.Car
+
+@{ ViewData["Title"] = "Edit"; }
+
+<div class="row">
+    <div class="col-12">
+
+        <div class="card card-primary border-0">
+            <div class="card-header">
+                <h3 class="card-title"> تعديل السيارة</h3>
+                <div class="d-inline">
+                    <a asp-action="Index"><i class="fa fa-arrow-left back-icon"></i></a>
+                </div>
+            </div>
+
+            <form asp-action="Edit">
+                <div class="card-body">
+                    <div class="row justify-content-center">
+                        <div class="col-5">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <input type="hidden" asp-for="Id" />
+                            <div class="form-group">
+                                <label asp-for="CarNumber" class="control-label"></label>
+                                <input asp-for="CarNumber" class="form-control" />
+                                <span asp-validation-for="CarNumber" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Manufacture" class="control-label"></label>
+                                <input asp-for="Manufacture" class="form-control" />
+                                <span asp-validation-for="Manufacture" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="CarModel" class="control-label"></label>
+                                <input asp-for="CarModel" class="form-control" />
+                                <span asp-validation-for="CarModel" class="text-danger"></span>
+                            </div>
+
+
+
+
+
+                        </div>
+                        <div class="col-5">
+                            <div class="form-group">
+                                <label asp-for="Status" class="control-label"></label>
+                                <input asp-for="Status" class="form-control" />
+                                <span asp-validation-for="Status" class="text-danger"></span>
+                            </div>
+                            <div class="form-group ">
+                                <label asp-for="Madeyear" class="control-label"> </label>
+                                <input asp-for="Madeyear" class="form-control" />
+                                <span asp-validation-for="Madeyear" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="TarvelDistance" class="control-label"></label>
+                                <input asp-for="TarvelDistance" class="form-control" />
+                                <span asp-validation-for="TarvelDistance" class="text-danger"></span>
+                            </div>
+
+
+
+
+                        </div>
+                        <div class="col-6 mx-auto">
+                            <div class="form-group justify-content-center">
+                                <label asp-for="DriverId" class="control-label"> </label>
+                                <select asp-for="DriverId" class="form-control" asp-items="ViewBag.DriverId"></select>
+                                <span asp-validation-for="DriverId" class="text-danger"></span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-outline-primary">
+                        <i class="far fa-edit"></i>
+                        تعديل
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

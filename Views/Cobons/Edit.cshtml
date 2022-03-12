@@ -1,0 +1,77 @@
+﻿@model Takke.Models.Cobon
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="row">
+    <div class="col-12">
+
+        <div class="card card-primary border-0">
+            <div class="card-header">
+                <h3 class="card-title"> تعديل الكوبون</h3>
+                <div class="d-inline">
+                    <a asp-action="Index"><i class="fa fa-arrow-left back-icon"></i></a>
+                </div>
+            </div>
+            <form asp-action="Edit">
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+
+                <div class="card-body">
+                    <div class="row justify-content-center">
+                        <div class="col-5">
+                            <div class="form-group">
+                                <label asp-for="CobonValue" class="control-label"></label>
+                                <input asp-for="CobonValue" class="form-control" />
+                                <span asp-validation-for="CobonValue" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="CreationDate" class="control-label"></label>
+                                <input asp-for="CreationDate" class="form-control" />
+                                <span asp-validation-for="CreationDate" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="form-group">
+                                <label asp-for="ActivationCode" class="control-label"></label>
+                                <input asp-for="ActivationCode" class="form-control" />
+                                <span asp-validation-for="ActivationCode" class="text-danger"></span>
+                            </div>
+                            <div class="form-group form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" asp-for="Activated" /> @Html.DisplayNameFor(model => model.Activated)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="form-group">
+                                <label asp-for="ClientId" class="control-label"></label>
+                                <select asp-for="ClientId" class="form-control" asp-items="ViewBag.ClientId"></select>
+                                <span asp-validation-for="ClientId" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Cobontype" class="control-label"></label>
+                                <input asp-for="Cobontype" class="form-control" />
+                                <span asp-validation-for="Cobontype" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-outline-primary">
+                        <i class="far fa-edit"></i>
+                        تعديل
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
