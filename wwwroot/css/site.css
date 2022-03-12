@@ -1,0 +1,127 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 30px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+
+
+.content-wrapper {
+    padding: 30px 10px 20px;
+}
+
+
+/*-----------------------------*/
+
+span.lead {
+    font-size: 24px;
+    font-weight: bold;
+}
+.card-body .form-control {
+    border: solid 2px var(--info);
+    height: calc(2.25rem + 5px);
+}
+
+
+.radio-1 {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+    .radio-1 label,
+    .radio-2 label {
+        cursor: pointer;
+    }
+
+.radio-2 {
+    display: inline-block;
+    margin: 5px 35px 0 0;
+}
+
+
+.alert-dismissible .close {
+    right: auto !important;
+    left: 0 !important;
+}
+
+.dataTables_info, .dataTables_length {
+    float: right;
+}
+
+#files_list_paginate, .dataTables_filter {
+    float: left;
+}
+
+#files_list_paginate, .dataTables_filter  input {
+margin: 0 10px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
